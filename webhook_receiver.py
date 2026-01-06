@@ -31,7 +31,7 @@ def create_iris_case(alert_data):
     logging.info("Attempting to create IRIS case...")
 
     # Get data from the Splunk alert
-    # We use .get() method to avoid errors if a field is missing
+    # .get() method to avoid errors if a field is missing
     ip_to_block = alert_data.get('dest_ip', 'N/A')
     signatures = alert_data.get('signatures', 'N/A')
     src_ip = alert_data.get('src_ip', 'N/A')
